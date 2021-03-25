@@ -1,8 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    int n,sum=1,a=0;
+    int n,sum=1,a=0,all;
     scanf("%d",&n);
+    if(n>=1 && n<=1000000)
+    {
     if(n==1)
     {
         printf("%d",n);
@@ -30,5 +32,8 @@ int main()
             printf("%d",sum);
 
     }
+    }
+    else
+        printf("Error");
 
 }
