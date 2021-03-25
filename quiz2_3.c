@@ -17,31 +17,15 @@ int main()
         {
             for(int i=1; i<n; i++)
             {
-                if(i%100!=0)
+                if(i%10!=0)
                 {
                     if(i%11==0)
                     {
-                          printf("%d ",i);
                           sum++;
                     }
                 }
             }break;
         }
-        /* if(j<=1000)
-        {
-            for(int i=1; i<n; i++)
-            {
-                if(i%10!=0)
-                {
-                    if(i%11==0)
-                    {
-                      //  printf("%d ",i);
-                        sum++;
-                    }
-                }
-            }
-            break;
-        }*/
     }
     printf("%d",sum);
 }
