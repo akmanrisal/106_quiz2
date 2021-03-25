@@ -3,46 +3,51 @@ int main()
 {
     int n,sum=0,sum1=1;
     scanf("%d",&n);
-    for(int j=1; j<=n; j++)
+    if(n>1 && n<1000000)
     {
-        if(j<=10)
+        for(int j=1; j<=n; j++)
         {
-            for(int i=1; i<n; i++)
+            if(j<=10)
             {
-                if(i%10==i)
-                    sum++;
-            }
-        }
-        if(j<=100)
-        {
-            for(int i=1; i<n; i++)
-            {
-                if(i%10!=0)
+                for(int i=1; i<n; i++)
                 {
-                    if(i%11==0)
+                    if(i%10==i)
                         sum++;
                 }
             }
-            break;
-        }
-        if(j<=1000)
-        {
-            for(int i=1; i<n; i++)
+            if(j<=100)
             {
-                if(i%10!=0)
+                for(int i=1; i<n; i++)
                 {
-                    if(i%11==0)
+                    if(i%10!=0)
                     {
-                        sum++;
+                        if(i%11==0)
+                            sum++;
                     }
-
                 }
+                break;
             }
-            break;
+            if(j<=1000)
+            {
+                for(int i=1; i<n; i++)
+                {
+                    if(i%10!=0)
+                    {
+                        if(i%11==0)
+                        {
+                            sum++;
+                        }
+
+                    }
+                }
+                break;
+            }
         }
+        if(n>=1000)
+            printf("%d",sum+18);
+        else
+            printf("%d",sum);
     }
-    if(n>=1000)
-         printf("%d",sum+18);
     else
-        printf("%d",sum);
+        printf("Error");
 }
