@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,cube;
+    int n,sum=1,a=0;
     scanf("%d",&n);
     if(n==1)
     {
@@ -9,16 +9,26 @@ int main()
     }
     else
     {
-        for(int i=2;i<n;i++)
+        for(int i=2; i<=n; i++)
         {
-            if(n==pow(i,3))
+            sum++;
+            for(int j=2; j<=n; j++)
             {
-                printf("Not cube free");
+                if(j==i*i*i)
+                {
+                    if(j==n)
+                    {
+                        printf("Not cube free");
+                        a++;
+                    }
+                    sum--;
+                }
             }
-            else
-                printf("%d",n);
-                break;
+
         }
+        if(a==0)
+            printf("%d",sum);
+
     }
 
 }
